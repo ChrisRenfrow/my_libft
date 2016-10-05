@@ -6,21 +6,21 @@
 /*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/04 21:53:44 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/10/04 21:55:08 by crenfrow         ###   ########.fr       */
+/*   Updated: 2016/10/05 13:29:12 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
 int	ft_lstct(t_list *lst)
 {
 	int ct;
+
 	ct = 0;
-	if (lst->next)
+	while (lst->next)
 	{
 		lst = lst->next;
 		ct++;
 	}
-	return ct;
+	return (ct);
 }

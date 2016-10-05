@@ -6,11 +6,10 @@
 /*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 20:00:19 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/09/30 21:39:00 by crenfrow         ###   ########.fr       */
+/*   Updated: 2016/10/05 13:51:04 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
