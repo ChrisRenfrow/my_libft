@@ -6,7 +6,7 @@
 /*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 15:32:53 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/10/05 13:47:52 by crenfrow         ###   ########.fr       */
+/*   Updated: 2016/10/06 11:26:06 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct		s_list
 long				ft_abs(long nbr);
 int					ft_lstct(t_list *lst);
 int					ft_isws(char d);
+int					ft_ctwrd(const char *str, char c);
 void				*ft_memrcpy(void *dst, const void *src, size_t n);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);

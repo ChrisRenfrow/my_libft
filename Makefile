@@ -6,7 +6,7 @@
 #    By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:49:42 by crenfrow          #+#    #+#              #
-#    Updated: 2016/10/05 13:47:10 by crenfrow         ###   ########.fr        #
+#    Updated: 2016/10/06 11:27:40 by crenfrow         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ FILENAMES	=	ft_isws			\
 				ft_abs			\
 				ft_lstct		\
 				ft_memrcpy		\
+				ft_ctwrd
 # Assignment Part 1
 FILENAMES 	+= 	ft_memset		\
 				ft_bzero 		\
