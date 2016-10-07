@@ -6,7 +6,7 @@
 /*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 17:24:51 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/10/05 13:56:28 by crenfrow         ###   ########.fr       */
+/*   Updated: 2016/10/06 17:55:20 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *s, int c)
 	int		i;
 	char	*ptr;
 
-	i = strlen(s);
+	i = ft_strlen(s);
 	while (i > -1)
 	{
 		if (s[i] == c)
