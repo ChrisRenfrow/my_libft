@@ -6,7 +6,7 @@
 /*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 15:32:53 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/10/06 11:26:06 by crenfrow         ###   ########.fr       */
+/*   Updated: 2016/10/18 20:15:15 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-long				ft_abs(long nbr);
+int					ft_abs(int nbr);
 int					ft_lstct(t_list *lst);
 int					ft_isws(char d);
 int					ft_ctwrd(const char *str, char c);
