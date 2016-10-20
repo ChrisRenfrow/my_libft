@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/22 18:05:01 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/10/05 13:53:50 by crenfrow         ###   ########.fr       */
+/*   Created: 2016/09/22 19:46:58 by crenfrow          #+#    #+#             */
+/*   Updated: 2016/10/20 12:38:22 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*s1_cmp;
-	unsigned char	*s2_cmp;
-	int				i;
-
-	s1_cmp = (unsigned char *)s1;
-	s2_cmp = (unsigned char *)s2;
-	i = 0;
-	while ((s1_cmp[i] || s2_cmp[i]) && i < (int)n)
-	{
-		if (s1_cmp[i] - s2_cmp[i])
-			return (s1_cmp[i] - s2_cmp[i]);
-		i++;
-	}
-	return (0);
+	if (dst == src)
+		return (dst);
+	else if (dst < src)
+		ft_memcpy(dst, src, len);
+	else
+		ft_memrcpy(dst, src, len);
+	return (dst);
 }

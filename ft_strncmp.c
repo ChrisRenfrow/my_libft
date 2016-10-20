@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/22 19:55:21 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/10/05 13:51:59 by crenfrow         ###   ########.fr       */
+/*   Created: 2016/09/22 18:05:01 by crenfrow          #+#    #+#             */
+/*   Updated: 2016/10/20 13:38:41 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned char	*dst_tmp;
-	unsigned char	*src_tmp;
-	int				i;
+	unsigned char	*s1_cmp;
+	unsigned char	*s2_cmp;
+	size_t			i;
 
-	dst_tmp = (unsigned char *)dst;
-	src_tmp = (unsigned char *)src;
+	s1_cmp = (unsigned char *)s1;
+	s2_cmp = (unsigned char *)s2;
 	i = 0;
-	while (i < (int)n)
+	while ((s1_cmp[i] && s2_cmp[i]) && i < n)
 	{
-		dst_tmp[i] = src_tmp[i];
+		if (s1_cmp[i] - s2_cmp[i])
+			return (s1_cmp[i] - s2_cmp[i]);
 		i++;
 	}
-	return (dst);
+	if (i == n)
+		return (s1_cmp[i - 1] - s2_cmp[i - 1]);
+	else
+		return (s1_cmp[i] - s2_cmp[i]);
 }
