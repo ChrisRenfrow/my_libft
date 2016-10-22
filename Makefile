@@ -6,7 +6,7 @@
 #    By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:49:42 by crenfrow          #+#    #+#              #
-#    Updated: 2016/10/18 21:45:40 by crenfrow         ###   ########.fr        #
+#    Updated: 2016/10/22 14:04:51 by crenfrow         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,8 +80,10 @@ FILENAMES	+=	ft_lstnew		\
 				ft_lstiter		\
 				ft_lstmap		\
 
-SOURCES 	= $(addsuffix .c, $(FILENAMES))
-BUILD 		= $(addprefix build/, $(SOURCES:.c=.o))
+CFILES 		= $(addsuffix .c, $(FILENAMES))
+SOURCES		= $(addprefix sources/, $(CFILES))
+BUILD 		= $(addprefix build/, $(CFILES:.c=.o))
+INCDIR		= -I includes/
 FLAGS 		= -Wall -Wextra -Werror
 CC 			= gcc
 
@@ -90,8 +92,8 @@ all: $(NAME)
 $(NAME): $(SOURCES) | $(BUILD)
 		ar rcs $@ $(BUILD)
 
-build/%.o: %.c | build
-		$(CC) $(FLAGS) -c $^ -o $@
+build/%.o: sources/%.c | build
+		$(CC) $(FLAGS) $(INCDIR) -c $^ -o $@
 
 clean:
 		rm -rf build/
