@@ -6,32 +6,27 @@
 /*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/06 11:14:44 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/10/18 17:25:06 by crenfrow         ###   ########.fr       */
+/*   Updated: 2016/10/22 19:44:26 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_ctwrd(const char *s, char c)
-{
-	int i;
-	int count;
-	int has_word;
+#include "libft.h"
 
-	i = 0;
+int	ft_ctwrd(const char *s, char c)
+{	
+	int count;
+
 	count = 0;
-	while (s[i])
+	while(*s)
 	{
-		has_word = 0;
-		while (s[i] == c)
-			i++;
-		while (s[i] && s[i] != c)
+		if (*s == c)
+			s++;
+		else
 		{
-			has_word = 1;
-			i++;
-		}
-		while (s[i] == c)
-			i++;
-		if (has_word)
+			while (*s && *s != c)
+				s++;
 			count++;
+		}
 	}
 	return (count);
 }

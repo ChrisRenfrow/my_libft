@@ -6,7 +6,7 @@
 /*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/05 12:42:57 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/10/18 17:15:52 by crenfrow         ###   ########.fr       */
+/*   Updated: 2016/10/22 19:44:54 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	ft_abs(int nbr)
 {
 	if (nbr < 0)
-		return (nbr *= -1);
-	else
-		return (nbr);
+		return (-nbr);
+	return (nbr);
 }

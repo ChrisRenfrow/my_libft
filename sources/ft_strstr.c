@@ -6,12 +6,11 @@
 /*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/16 14:24:29 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/10/03 12:54:11 by crenfrow         ###   ########.fr       */
+/*   Updated: 2016/10/22 18:47:01 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strstr(const char *big, const char *little)
 {

@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_realloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: crenfrow <crenfrow@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/26 17:36:43 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/10/22 17:29:26 by crenfrow         ###   ########.fr       */
+/*   Created: 2016/12/07 04:41:23 by crenfrow          #+#    #+#             */
+/*   Updated: 2016/12/07 04:42:05 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void	ft_putendl_fd(char const *s, int fd)
+void	*ft_realloc(void *orig, size_t new)
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	char	*fresh;
+
+	fresh = ft_strnew(new);
+	fresh = ft_strcpy(fresh, orig);
+	free(orig);
+	return (fresh);
 }

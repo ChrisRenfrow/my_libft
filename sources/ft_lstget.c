@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstget.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: crenfrow <crenfrow@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/26 17:36:43 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/10/22 17:29:26 by crenfrow         ###   ########.fr       */
+/*   Created: 2016/10/30 03:44:46 by crenfrow          #+#    #+#             */
+/*   Updated: 2016/10/30 23:54:31 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+/*
+**	Accesses the list item at index and returns a reference to it.
+*/
+
+t_list	*ft_lstget(t_list **alist, int i)
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	if (i <= 0 || !*alist)
+		return (*alist);
+	else
+		return (ft_lstget(&(*alist)->next, i - 1));
 }

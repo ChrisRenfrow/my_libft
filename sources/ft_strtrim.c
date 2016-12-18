@@ -6,13 +6,13 @@
 /*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/26 17:21:12 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/09/30 21:31:45 by crenfrow         ###   ########.fr       */
+/*   Updated: 2016/10/22 18:43:47 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		is_trim(char c)
+int	static	is_trim(char c)
 {
 	if (c == ' ' || c == '\n' || c == '\t')
 		return (1);

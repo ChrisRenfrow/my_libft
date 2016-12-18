@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_digilen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/26 17:36:43 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/10/22 17:29:26 by crenfrow         ###   ########.fr       */
+/*   Created: 2016/10/22 19:52:53 by crenfrow          #+#    #+#             */
+/*   Updated: 2016/10/22 22:39:33 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+int		ft_digilen(int nb)
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	int	len;
+
+	len = 0;
+	if (nb < 0)
+	{
+		nb = -nb;
+		len++;
+	}
+	while (nb > 10)
+	{
+		nb /= 10;
+		len++;
+	}
+	return (len + 1);
 }

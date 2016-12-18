@@ -3,20 +3,29 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: crenfrow <crenfrow@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:49:42 by crenfrow          #+#    #+#              #
-#    Updated: 2016/10/22 14:04:51 by crenfrow         ###   ########.fr        #
+#    Updated: 2016/12/17 22:45:23 by crenfrow         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 		= 	libft.a
 # My bonus functions
-FILENAMES	=	ft_isws			\
-				ft_abs			\
+FILENAMES	=	ft_abs			\
 				ft_lstct		\
+				ft_ctwrd		\
 				ft_memrcpy		\
-				ft_ctwrd
+				ft_digilen		\
+				ft_strrev		\
+				ft_lstget		\
+				ft_lstaddend	\
+				ft_memrealloc	\
+				ft_memreallocf	\
+				ft_strlchr		\
+				ft_realloc		\
+				ft_strlchr		\
+				get_next_line	\
 # Assignment Part 1
 FILENAMES 	+= 	ft_memset		\
 				ft_bzero 		\

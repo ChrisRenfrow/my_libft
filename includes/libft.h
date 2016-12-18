@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: crenfrow <crenfrow@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 15:32:53 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/10/18 20:15:15 by crenfrow         ###   ########.fr       */
+/*   Updated: 2016/12/17 22:41:40 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,25 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
-
+/*
+**	==========================[ Extra Functions ]==============================
+*/
 int					ft_abs(int nbr);
 int					ft_lstct(t_list *lst);
-int					ft_isws(char d);
 int					ft_ctwrd(const char *str, char c);
 void				*ft_memrcpy(void *dst, const void *src, size_t n);
+int					ft_digilen(int nb);
+char				*ft_strrev(char *str);
+t_list				*ft_lstget(t_list **alst, int i);
+void				ft_lstaddend(t_list **alst, t_list *new);
+void				*ft_memrealloc(void *ptr, size_t new_size);
+void				*ft_memreallocf(void *ptr, size_t new_size);
+void				*ft_realloc(void *orig, size_t new);
+int					ft_strlchr(char *str, int c);
+int					get_next_line(const int fd, char **line);
+/*
+**	==============================[ Part One ]==================================
+*/
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
@@ -55,9 +68,11 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
+/*
+**	==============================[ Part Two ]==================================
+*/
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
-char				*ft_strnew(size_t size);
 char				*ft_strnew(size_t size);
 void				ft_strdel(char **as);
 void				ft_strclr(char *s);
@@ -80,6 +95,9 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+/*
+**	================================[ Bonus ]===================================
+*/
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));

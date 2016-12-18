@@ -6,13 +6,13 @@
 /*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 16:11:35 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/10/18 17:17:04 by crenfrow         ###   ########.fr       */
+/*   Updated: 2016/10/22 19:51:05 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_ws(char d)
+static int	is_ws(char d)
 {
 	if (d == '\t' || d == '\n' || d == '\v' || d == '\f' || d == '\r' ||
 			d == ' ')

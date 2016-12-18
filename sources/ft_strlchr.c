@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strlchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crenfrow <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: crenfrow <crenfrow@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/26 17:36:43 by crenfrow          #+#    #+#             */
-/*   Updated: 2016/10/22 17:29:26 by crenfrow         ###   ########.fr       */
+/*   Created: 2016/12/07 04:39:36 by crenfrow          #+#    #+#             */
+/*   Updated: 2016/12/07 04:39:50 by crenfrow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+int		ft_strlchr(char *str, int c)
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	int		l;
+
+	l = 0;
+	while (str[l] != 0 && str[l] != c)
+		l++;
+	return (l);
 }
