@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: crenfrow <crenfrow@student.42.fr>          +#+  +:+       +#+         #
+#    By: crenfrow <crenfrow@student.42.us>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:49:42 by crenfrow          #+#    #+#              #
-#    Updated: 2016/12/17 22:45:23 by crenfrow         ###   ########.fr        #
+#    Updated: 2017/04/18 00:11:22 by crenfrow         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,11 +88,14 @@ FILENAMES	+=	ft_lstnew		\
 				ft_lstadd		\
 				ft_lstiter		\
 				ft_lstmap		\
+				ft_itoa_base	\
+				ft_strtoupper	\
+				ft_strtolower	\
 
 CFILES 		= $(addsuffix .c, $(FILENAMES))
-SOURCES		= $(addprefix sources/, $(CFILES))
+SOURCES		= $(addprefix src/, $(CFILES))
 BUILD 		= $(addprefix build/, $(CFILES:.c=.o))
-INCDIR		= -I includes/
+INCDIR		= -I inc/
 FLAGS 		= -Wall -Wextra -Werror
 CC 			= gcc
 
@@ -101,7 +104,7 @@ all: $(NAME)
 $(NAME): $(SOURCES) | $(BUILD)
 		ar rcs $@ $(BUILD)
 
-build/%.o: sources/%.c | build
+build/%.o: src/%.c | build
 		$(CC) $(FLAGS) $(INCDIR) -c $^ -o $@
 
 clean:
